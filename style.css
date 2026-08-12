@@ -1,0 +1,47 @@
+header {
+    background:linear-gradient(to right,rgba(0, 0, 255, 0.486),rgb(107, 3, 107));
+    height: 100px;
+    /* shape-margin: 2cm; */
+    font-family:sans-serif;
+    font-size: larger;
+}
+header h1{
+    text-align: center;
+    padding-top: 25px;
+    color:rgb(250, 246, 246)
+}
+h4{
+    text-align: center;
+    /* padding:10px; */
+}
+nav{
+     /* background:linear-gradient(to right,rgba(0, 0, 255, 0.486),rgb(107, 3, 107)); */
+    /* display:inline-block; */
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    color:white;
+    text-decoration: none;
+    text-indent:5px;
+}
+nav a:hover{
+    background-color:rgb(2, 2, 17);
+    color:white;
+    }
+
+footer{
+    height:15px;
+    background-color:black;
+    padding-top: px;
+    text-align:center;
+    color:white;
+}
+main{
+    p{
+        text-align: center;
+    }
+}
+body{
+    background:linear-gradient(to right,white,rgba(0, 0, 0, 0.753))
+
+}
