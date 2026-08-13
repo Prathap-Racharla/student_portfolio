@@ -1,67 +1,247 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <style>
-        header2 {
-            text-align:center;
-        }
-body{
-    text-align: center;
-    h3{
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color:blue;
-    }
-    font-family:'Times New Roman', Times, serif;
-    /* background:linear-gradient(to right,white,rgba(0, 0, 0, 0.664)) */
-    
-}
-body ul {
-    text-align: center;
-}
-body ul li{
-    display:inline-block;
-    text-align: left;
-    padding-right: 50px;
-    margin: left 1px;
+<html>
+<head>
+    <title>Prathap | About</title>
 
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 40px 25px;
+            background-color: #111;
+            color: white;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile h1 {
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+
+        .profile p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 30px 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #bbb;
+            padding: 12px 15px;
+            display: block;
+        }
+
+        nav a:hover {
+            color: white;
+            background-color: #222;
+        }
+
+        nav a.active {
+            color: white;
+            background-color: #333;
+            border-left: 4px solid white;
+        }
+
+        .social {
+            position: absolute;
+            bottom: 30px;
+            left: 25px;
+            right: 25px;
+        }
+
+        .social hr {
+            margin-bottom: 20px;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #aaa;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .social a:hover {
+            color: white;
+        }
+
+
+        /* ABOUT CONTENT */
+
+        .about-content {
+            margin-left: 240px;
+            min-height: 100vh;
+            padding: 60px;
+        }
+
+        .about {
+            max-width: 800px;
+        }
+
+        .greeting {
+            font-size: 16px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .about h1 {
+            font-size: 60px;
+            margin-bottom: 5px;
+        }
+
+        .about h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .about-text {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .skills-section {
+            margin-top: 30px;
+        }
+
+        .skills-section h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #111;
+            color: #111;
+        }
+
+        .skills span:hover {
+            background-color: #111;
+            color: white;
+        }
+
     </style>
 </head>
-<header>
-        <h1>Portfolio</h1>
-    </header>
-    <header2><h4>Welcome to My Page</h4></header2>
+
 <body>
-    <nav>
-        <a href="portfolio.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <hr>
-    <h3><u>Personal Information</u></h3>
-    <p>I am Prathap Racharla. <br>I am student at Rajeev Gandhi Memorial College of Engineering and Technology.</p>
-    <h3><u>Education</u></h3>
-    <ul>
-        <li>SSC</li><br>
-        <li>Intermediate</li><br>
-        <li>B.Tech</li>
-    </ul>
-    <h3><u>Hobbies</u></h3>
-    <ul>
-        <li>Reading books</li><br>
-        <li>Watching Anime</li><br>
-        <li>Playing</li>
-    </ul>
-        <footer>
-        <p>
-        <h6>@ MyPortfolio</h6>
-        </p>
-    </footer>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="profile">
+            <h1>PRATHAP</h1>
+            <p>Student Developer</p>
+        </div>
+
+        <hr>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="about.html" class="active">ABOUT</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+        <div class="social">
+            <hr>
+            <a href="https://github.com/Prathap-Racharla">GitHub</a>
+            <a href="https://www.linkedin.com/in/racharla-prathap">LinkedIn</a>
+        </div>
+
+    </div>
+
+
+    <!-- Main About Content -->
+    <main class="about-content">
+
+        <section class="about">
+
+            <p class="greeting">ABOUT ME</p>
+
+            <h1>PRATHAP</h1>
+
+            <h2>Student Developer</h2>
+
+            <p class="about-text">
+                I am a student developer focused on building my
+                programming and problem-solving skills. I enjoy
+                working with Java, exploring Data Structures and
+                Algorithms, and developing practical projects.
+            </p>
+
+            <p class="about-text">
+                I am also exploring web development and machine
+                learning while continuously learning new technologies.
+                I enjoy understanding how things work and improving
+                my skills through practical implementation.
+            </p>
+
+            <p class="about-text">
+                My current focus is on strengthening my programming
+                fundamentals, solving algorithmic problems, and
+                building projects that allow me to apply what I learn.
+            </p>
+
+
+            <div class="skills-section">
+
+                <h2>MY SKILLS</h2>
+
+                <div class="skills">
+
+                    <span>Java</span>
+                    <span>C</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Data Structures</span>
+                    <span>Algorithms</span>
+                    <span>Machine Learning</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
+```

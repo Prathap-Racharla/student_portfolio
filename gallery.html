@@ -1,48 +1,275 @@
+```html
 <!DOCTYPE html>
+<html>
 <head>
+    <title>Prathap | Gallery</title>
+
     <style>
-        div{
-            display:flex;
-            /* width:100px; */
-            height:100px;
-            gap: 10px;
-            justify-content:center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        img{
-            border-color: blue;
-            border-radius: 10px;
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 40px 25px;
+            background-color: #111;
+            color: white;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile h1 {
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+
+        .profile p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #444;
+            margin: 30px 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #bbb;
+            padding: 12px 15px;
+            display: block;
+        }
+
+        nav a:hover {
+            color: white;
+            background-color: #222;
+        }
+
+        nav a.active {
+            color: white;
+            background-color: #333;
+            border-left: 4px solid white;
+        }
+
+        .social {
+            position: absolute;
+            bottom: 30px;
+            left: 25px;
+            right: 25px;
+        }
+
+        .social hr {
+            margin-bottom: 20px;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #aaa;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .social a:hover {
+            color: white;
+        }
+
+        /* Gallery Content */
+
+        .gallery-content {
+            margin-left: 240px;
+            min-height: 100vh;
+            padding: 60px;
+        }
+
+        .gallery-content h1 {
+            font-size: 60px;
+            margin-bottom: 5px;
+        }
+
+        .gallery-content > p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 35px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            max-width: 1000px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item h2 {
+            font-size: 22px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-item p {
+            line-height: 1.6;
+            color: #555;
         }
     </style>
-    <meta charset="UTF-8">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="style.css">
 </head>
-    <header>
-        <h1>Portfolio</h1>
-    </header>
-   <header2> <h4>Welcome to My Page</h4></header2>
-    <nav>
-        <a href="portfolio.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <hr>
-    <div class="gallery">
-        <div class="image-box">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="image">
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="profile">
+            <h1>PRATHAP</h1>
+            <p>Student Developer</p>
         </div>
-        <div class="image-box">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBAKlXRZX5PJA8fc4RcPGXgFusXlr-yX0jcHhDuE8Zat4sBX5IDpwzfeo&s=10" alt="image2">
+
+        <hr>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="gallery.html" class="active">GALLERY</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+        <div class="social">
+            <hr>
+            <a href="https://github.com/Prathap-Racharla">GitHub</a>
+            <a href="https://www.linkedin.com/in/racharla-prathap">LinkedIn</a>
         </div>
-        <div class="image-box">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvvxTSEnrwX9bf4J96xrYmFsvUVPxbx434NP61hTlsrC8A6dsF9bQ1Wkpx&s=10" alt="image 3">
-        </div>
+
     </div>
-        <footer>
+
+
+    <!-- Main Gallery Content -->
+    <main class="gallery-content">
+
+        <p class="greeting">MY WORK</p>
+
+        <h1>GALLERY</h1>
+
         <p>
-        <h6>@ MyPortfolio</h6>
+            A collection of my projects and work that I have
+            developed while learning and improving my skills.
         </p>
-    </footer>
-    </body>
-    </html>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+
+                <img src="1.png" alt="Project 1">
+
+                <h2>Student Diet Log</h2>
+
+                <p>
+                    A project designed to record food consumption
+                    and estimate daily calorie intake.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="2.png" alt="Project 2">
+
+                <h2>Web Portfolio</h2>
+
+                <p>
+                    A personal portfolio website developed using
+                    HTML and CSS.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="3.png" alt="Project 3">
+
+                <h2>Java Projects</h2>
+
+                <p>
+                    Programming projects developed while practicing
+                    Java and object-oriented programming.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="4.png" alt="Project 4">
+
+                <h2>DSA Practice</h2>
+
+                <p>
+                    Problems and solutions developed while learning
+                    Data Structures and Algorithms.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="5.png" alt="Project 5">
+
+                <h2>Machine Learning</h2>
+
+                <p>
+                    Learning projects based on machine learning
+                    and artificial intelligence.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="5.png" alt="Project 6">
+
+                <h2>Other Projects</h2>
+
+                <p>
+                    Other projects and experiments created during
+                    my learning journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+```
