@@ -164,5 +164,6 @@ nav a.active {
 .hero-image img {
     width: 280px;
     height: 350px;
-    object-fit: cover;
+    object-fit:cover;
+    border-radius: 1000000000px;
 }
